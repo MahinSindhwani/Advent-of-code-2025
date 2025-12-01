@@ -1,7 +1,6 @@
-inputfile = open("part1test.txt", "r")
+inputfile = open("input.txt", "r")
 start = 50
 zcount = 0
-output = []
 for line in inputfile:
     rotation = int(line[1:])
     if rotation > 100 :
@@ -26,4 +25,4 @@ for line in inputfile:
     if start == 0:
         zcount += 1
 
-print(zcount + output.count(0))
+print(zcount)

@@ -1,4 +1,4 @@
-f = open("part1.txt", "r")
+f = open("input.txt", "r")
 start = 50
 zcount = 0
 for line in f:
