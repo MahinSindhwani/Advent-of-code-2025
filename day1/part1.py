@@ -1,12 +1,14 @@
-inputfile = open("part1.txt", "r")
+f = open("part1.txt", "r")
 start = 50
-output = []
-for line in inputfile:
+zcount = 0
+for line in f:
     if line[0] == 'R':
         start = (start + int(line[1:])) % 100
-        output.append(start)
+        if start == 0:
+            zcount+=1
     elif line[0] == 'L':
         start = (start - int(line[1:])) % 100
-        output.append(start)
+        if start == 0:
+            zcount+=1
 
-print(output.count(0))
+print(zcount)
